@@ -109,34 +109,6 @@ img{
   margin-top: 8%;
 }
 
-/* botones derechos */
-.botones {
-  height: 6%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  position: absolute;
-  transform-style: preserve-3d;
-  transform: translateZ(30px);
-}
-.boton_verde_left{
-  top: 50%;
-  right: 15%;
-  display: none;
-}
-.boton_verde_right{
-  top: 43.5%;
-  right: 11%;
-  display: none;
-}
-.boton_amarillo{
-  top: 15%;
-  right: 20%;
-}
-.boton_amarillo:active {
-  transform: translateZ(25px);
-}
-
-/* botones de izquierda */
 /* botones de izquierda */
 .boton_principal_izquierda {
   height: 50%;
@@ -256,7 +228,7 @@ img{
   width: 25%;
   height: 8%;
   position: absolute;
-  right: 2%;
+  right: 3%;
   top: 27%;
   transform-style: preserve-3d;
   display: grid;
