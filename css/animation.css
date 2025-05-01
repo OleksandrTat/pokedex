@@ -1,0 +1,191 @@
+  /* Transiciones y animaciones */
+  button {
+    transition: transform .1s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .logo {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .lever {
+    transition: left 0.3s ease;
+  }
+  
+  .circulo_azul:active {
+    transform: translateZ(5px);
+  }
+  
+  .button-panel button,
+  .botones-control button,
+  .boton_principal_izquierda button {
+    transition: all 0.2s ease;
+  }
+  .button-panel button:hover {
+    transform: translateZ(12px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    background-color: rgb(218, 218, 218);
+  }
+  .button-panel button:active {
+    transform: translateZ(10px);
+  }
+  
+  .botones-control button:hover {
+    transform: translateZ(2px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    background-color: rgb(218, 218, 218);
+  }
+  .botones-control button:active {
+    transform: translateZ(-2px);
+  }
+  
+  .boton_principal_izquierda button:hover {
+    transform: translateZ(7px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+  .boton_principal_izquierda button:active {
+    transform: translateZ(0px);
+  }
+  
+  .boton_principal_izquierda .circulo_azul:hover {
+    transform: translateZ(12px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+  .boton_principal_izquierda .circulo_azul:active {
+    transform: translateZ(8px);
+  }
+  
+  /* Animaciones de luces */
+  .light-red {
+    animation: blinkRed 5s infinite;
+  }
+  .light-yellow {
+    animation: blinkYellow 2s infinite;
+  }
+  .light-green {
+    animation: blinkGreen 3s infinite;
+  }
+
+  .switcher:hover {
+    background-color: #450000;
+  }
+  .switcher:hover .lever {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  }
+  .lever {
+    transition: left 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pantalla::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: screenScan 3s linear infinite;
+  }
+  
+  /* Definiciones de las animaciones */
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateZ(20px);
+    }
+    50% {
+      transform: translateY(-5px) translateZ(20px);
+    }
+    100% {
+      transform: translateY(0) translateZ(20px);
+    }
+  }
+  
+  @keyframes screenScan {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 200%;
+    }
+  }
+
+  @keyframes blinkRed {
+    0%, 40% {
+      opacity: 1;
+    }
+    50%, 90% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blinkYellow {
+    0%, 45% {
+      opacity: 1;
+    }
+    50%, 95% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blinkGreen {
+    0%, 40% {
+      opacity: 1;
+    }
+    50%, 90% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Efectos 3D y transformaciones */
+  .main {
+    transform-style: preserve-3d;
+    perspective: 800px;
+  }
+  
+  .bg-blanco {
+    transform-style: preserve-3d;
+    transform: translateZ(-10px);
+  }
+  
+  .boton_principal_izquierda,
+  .content_canva,
+  .botones-control button,
+  .button-panel,
+  .switcher {
+    transform-style: preserve-3d;
+  }
+  
+  .boton_principal_top, 
+  .boton_principal_bottom {
+    transform-style: preserve-3d;
+    transform: translateZ(5px);
+  }
+  
+  .circulo_azul {
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+  }
+  
+  .button-panel button {
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+  }
+  
+  .pre-level-parax {
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+  }
+  
+  .first-level-parax {
+    transform-style: preserve-3d;
+    transform: translateZ(20px);
+  }

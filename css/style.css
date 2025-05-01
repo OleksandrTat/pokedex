@@ -9,9 +9,7 @@ body {
   place-items: center;
 }
 
-button{
-  cursor: pointer;
-  transition: transform .1s ease-in-out;
+button {
   border: none;
 }
 
@@ -19,20 +17,18 @@ button{
   position: relative;
   height: 80vh;
   aspect-ratio: 0,4862;
-  transform-style: preserve-3d;
-  perspective: 800px;
 }
 
-img{
+img {
   user-select: none;
   pointer-events: none;
 }
 
-.logo{
+.logo {
   width: 15%;
   height: auto;
   position: absolute;
-  top: -3%;
+  top: -2%;
   left: 42.5%;
 }
 
@@ -40,6 +36,7 @@ img{
 .bg-red-svg {
   height: 80vh;
 }
+
 .bg-blanco {
   width: 90%;
   height: 85%;
@@ -49,8 +46,6 @@ img{
   left: 5%;
   border-radius: 3em;
   z-index: -1;
-  transform-style: preserve-3d;
-  transform: translateZ(-10px);
 }
 
 /* elementos negros */
@@ -64,7 +59,8 @@ img{
   top: 20%;
   transform: translateX(-50%);
 }
-.rectangulo_negro{
+
+.rectangulo_negro {
   height: 16%;
   width: 100%;
   position: absolute;
@@ -80,9 +76,8 @@ img{
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  transform-style: preserve-3d;
-
 }
+
 .pantalla {
   height: 90%;
   width: 90%;
@@ -93,15 +88,17 @@ img{
   left: 50%;
   margin-top: -56%;
   margin-left: -45%;
+  overflow: hidden;
 }
 
 /* lineas diagonales */
-.container_diagonales{
+.container_diagonales {
   position: absolute;
   top: 70%;
   right: 15%;
 }
-.linea_diagonal{
+
+.linea_diagonal {
   height: 1.5vh;
   aspect-ratio: 8/1;
   border-radius: 50em;
@@ -118,8 +115,8 @@ img{
   top: 50%;
   margin-top: -16%;
   margin-left: -15%;
-  transform-style: preserve-3d;
 }
+
 .boton_principal_top, .boton_principal_bottom {
   height: 100%;
   aspect-ratio: 1;
@@ -128,15 +125,16 @@ img{
   top: 0%;
   left: 0%;
   cursor: pointer;
-  transform-style: preserve-3d;
-  transform: translateZ(5px);
 }
+
 .boton_principal_top {
   clip-path: inset(0 0 58% 0 round 0);
 }
+
 .boton_principal_bottom {
   clip-path: inset(58% 0 0 0 round 0);
 }
+
 .circulo_negro_buton {
   height: 50%;
   aspect-ratio: 1;
@@ -146,6 +144,7 @@ img{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .circulo_azul {
   height: 40%;
   aspect-ratio: 1;
@@ -156,19 +155,10 @@ img{
   margin-top: -20%;
   margin-left: -18%;
   cursor: pointer;
-  transform-style: preserve-3d;
-  transform: translateZ(10px);
-}
-.boton_principal_top:active,
-.boton_principal_bottom:active {
-  transform: translateZ(0px);
-}
-.circulo_azul:active {
-  transform: translateZ(5px);
 }
 
 /* botones de control */
-.botones-control{
+.botones-control {
   height: 13%;
   width: 20%;
   position: absolute;
@@ -181,7 +171,8 @@ img{
   grid-row-gap: 0px;
   gap: 5% 2%;
 }
-.botones-control button{
+
+.botones-control button {
   background-color: #fafafa;
   border-radius: 5px;
   border: none;
@@ -189,100 +180,85 @@ img{
   display: flex;
   place-content: center;
   place-items: center;
-  transform-style: preserve-3d;
-  cursor: pointer;
 }
-.botones-control button img{
+
+.botones-control button img {
   position: absolute;
   height: 50%;
 }
-.up{
+
+.up {
   grid-area: 1 / 2 / 2 / 3;
 }
-.down{
+
+.down {
   grid-area: 2 / 2 / 3 / 3;
 }
-.left{
+
+.left {
   border-radius: 19px 5px 5px 19px !important;
   grid-area: 1 / 1 / 3 / 2;
 }
-.right{
+
+.right {
   grid-area: 1 / 3 / 3 / 4; 
   border-radius: 5px 19px 19px 5px !important;
 } 
-.up img{
+
+.up img {
   transform: rotate(-90deg);
 }
-.down img{
+
+.down img {
   transform: rotate(90deg);
 }
-.left img{
+
+.left img {
   transform: rotate(180deg);
-}
-.botones-control button:active {
-  transform: translateZ(-3px);
 }
 
 /* button panel */
-.button-panel{
+.button-panel {
   width: 25%;
   height: 8%;
   position: absolute;
   right: 3%;
   top: 27%;
-  transform-style: preserve-3d;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 10% 2%;
 }
-.button-panel button{
+
+.button-panel button {
   border-radius: 20em;
-  transform-style: preserve-3d;
-  transform: translateZ(10px);
+  width: 100%;
   background-color: #ffffff;
+  font-size: 2vh;
 } 
-.buttonId{
-}
-.buttonCompare{
+
+.buttonCompare {
   background: linear-gradient(90deg, #ffffff 50%, #bdbdbd 50%);
 }
-.buttonRandom{
-
-}
-.buttonName{
-
-}
-.buttonLike{
-  
-}
-.buttonExport{
-  
-}
-.button-panel button:active {
-  transform: translateZ(5px);
-}
-
-
-
-
 
 /* switches */
-.container_switches{
+.container_switches {
   position: absolute;
   top: 70%;
   left: 17%;
 }
-.switcher{
+
+.switcher {
   height: 3vh;
   aspect-ratio: 4.5/1;
   border-radius: 50em;
   transform: rotate(20deg);
   margin-top: 10%;
   position: relative;
-  transform-style: preserve-3d;
+  cursor: pointer;
 }
-.lever{
+
+.lever {
   height: 80%;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -291,16 +267,14 @@ img{
   top: 0.26vh;
   margin-top: -4%;
   margin-left: 5%;
-  transition: left 0.3s ease;
-  cursor: pointer;
-}
-.switcher.on .lever {
-  left: calc(100% - 1em - 10%);
 }
 
+.switcher.on .lever {
+  left: calc(100% - 0.8em - 10%);
+}
 
 /* lights */
-.lights{
+.lights {
   width: 5%;
   position: absolute;
   left: 21%;
@@ -308,101 +282,57 @@ img{
   display: flex;
   z-index: 3;
 }
-.lights *{
+
+.lights * {
   width: 25%;
   aspect-ratio: 1;
   border-radius: 50%;
   position: relative;
-
 }
+
 .light-red {
   background-color: #ff0000;
   box-shadow: 0 0 8px #ff0000;
-  animation: blinkRed 5s infinite;
 }
 
 .light-yellow {
   background-color: #ffff00;
   box-shadow: 0 0 8px #ffff00;
   left: 25%;
-  animation: blinkYellow 2s infinite;
 }
 
 .light-green {
   background-color: #00ff00;
   box-shadow: 0 0 8px #00ff00;
   left: 50%;
-  animation: blinkGreen 3s infinite;
 }
-
 
 /* colores */
 .black {
   background-color: #000000;
 }
+
 .green {
   background-color: #257425;
 }
+
 .red {
   background-color: #A60000;
 }
-.brown{
+
+.brown {
   background-color: #350000;
 }
+
 .white {
   background-color: #ffffff;
 }
+
 .blue {
   background: #3F5EFB;
   background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgb(155, 171, 255) 100%);
 }
-.yellow{
+
+.yellow {
   background-color: #E8FCBA;
-}
-
-
-
-.pre-level-parax{
-  transform-style: preserve-3d;
-  transform: translateZ(10px);
-}
-.first-level-parax{
-  transform-style: preserve-3d;
-  transform: translateZ(20px);
-}
-
-
-/* animations */
-@keyframes blinkRed {
-  0%, 40% {
-    opacity: 1;
-  }
-  50%, 90% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes blinkYellow {
-  0%, 45% {
-    opacity: 1;
-  }
-  50%, 95% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes blinkGreen {
-  0%, 40% {
-    opacity: 1;
-  }
-  50%, 90% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
 }

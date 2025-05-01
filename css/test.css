@@ -1,0 +1,272 @@
+/* Transiciones */
+button {
+    transition: transform .1s ease-in-out;
+  }
+  
+  .main {
+    transition: transform 0.5s ease;
+    animation: powerOn 1.5s ease-in-out;
+  }
+  
+  .logo {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .pantalla::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: screenScan 3s linear infinite;
+  }
+
+  .linea_diagonal {
+    transition: all 0.3s ease;
+  }
+
+  .linea_diagonal:hover {
+    transform: rotate(-20deg) scale(1.1);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  }
+  
+  .boton_principal_top, 
+  .boton_principal_bottom {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .circulo_azul {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .boton_principal_top:active,
+  .boton_principal_bottom:active {
+    transform: translateZ(0px);
+  }
+  
+  .circulo_azul:active {
+    transform: translateZ(5px);
+  }
+  
+  .boton_principal_top:hover, 
+  .boton_principal_bottom:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+  }
+  
+  .circulo_azul:hover {
+    box-shadow: 0 0 12px rgba(63, 94, 251, 0.8);
+    transform: translateZ(15px);
+  }
+  
+  .botones-control button {
+    transition: all 0.2s ease;
+  }
+  
+  .botones-control button img {
+    transition: transform 0.2s ease;
+  }
+  
+  .botones-control button:active {
+    transform: translateZ(-3px);
+  }
+  
+  .botones-control button:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .botones-control button:hover img {
+    transform: scale(1.2) rotate(-90deg);
+  }
+  
+  .down:hover img {
+    transform: scale(1.2) rotate(90deg);
+  }
+  
+  .left:hover img {
+    transform: scale(1.2) rotate(180deg);
+  }
+  
+  .right:hover img {
+    transform: scale(1.2) rotate(0);
+  }
+  
+  .button-panel button {
+    transition: all 0.2s ease;
+  }
+  
+  .button-panel button:hover {
+    transform: translateZ(15px);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button-panel button:active {
+    transform: translateZ(5px);
+  }
+  
+  .buttonRandom:hover {
+    background-color: #ffeb3b;
+  }
+  
+  .buttonName:hover {
+    background-color: #4caf50;
+  }
+  
+  .buttonLike:hover {
+    background-color: #f44336;
+  }
+  
+  .buttonExport:hover {
+    background-color: #2196f3;
+  }
+  
+  .switcher:hover {
+    background-color: #450000;
+  }
+  
+  .switcher:hover .lever {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  }
+  
+  .lever {
+    transition: left 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .lights * {
+    transition: transform 0.3s ease;
+  }
+  
+  .lights *:hover {
+    transform: scale(1.3);
+  }
+  
+  .light-red {
+    animation: blinkRed 5s infinite;
+  }
+  
+  .light-yellow {
+    animation: blinkYellow 2s infinite;
+  }
+  
+  .light-green {
+    animation: blinkGreen 3s infinite;
+  }
+  
+  /* Efectos 3D y transformaciones */
+  .main {
+    transform-style: preserve-3d;
+    perspective: 800px;
+  }
+  
+  .bg-blanco {
+    transform-style: preserve-3d;
+    transform: translateZ(-10px);
+  }
+  
+  .content_canva,
+  .boton_principal_izquierda,
+  .botones-control button,
+  .button-panel,
+  .switcher {
+    transform-style: preserve-3d;
+  }
+  
+  .boton_principal_top, 
+  .boton_principal_bottom {
+    transform-style: preserve-3d;
+    transform: translateZ(5px);
+  }
+  
+  .circulo_azul {
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+  }
+  
+  .button-panel button {
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+  }
+  
+  .pre-level-parax {
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+  }
+  
+  .first-level-parax {
+    transform-style: preserve-3d;
+    transform: translateZ(20px);
+  }
+  
+  /* Definiciones de las animaciones */
+  @keyframes blinkRed {
+    0%, 40% {
+      opacity: 1;
+    }
+    50%, 90% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blinkYellow {
+    0%, 45% {
+      opacity: 1;
+    }
+    50%, 95% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blinkGreen {
+    0%, 40% {
+      opacity: 1;
+    }
+    50%, 90% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateZ(20px);
+    }
+    50% {
+      transform: translateY(-5px) translateZ(20px);
+    }
+    100% {
+      transform: translateY(0) translateZ(20px);
+    }
+  }
+  
+  @keyframes screenScan {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 200%;
+    }
+  }
+  
+  @keyframes powerOn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
