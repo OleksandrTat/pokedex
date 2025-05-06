@@ -1,7 +1,49 @@
+:root {
+    /* Colores genéricos */
+    --body-bg: black;
+    --body-text: #ffffff;
+
+    /* Pantalla */
+    --pantalla-bg: rgb(61, 61, 61);
+
+    /* Fondo principal */
+    --bg-main-color: #7D6000;
+    --bg-main-gradient: linear-gradient(180deg, rgba(125, 96, 0, 1) 0%, rgba(197, 135, 73, 1) 100%);
+
+    /* Top background */
+    --topbg-color: #BA2A1F;
+    --topbg-gradient: linear-gradient(250deg, rgba(186, 42, 31, 1) 0%, rgba(246, 227, 107, 1) 100%);
+
+    /* Corner background */
+    --cornerbg-gradient: linear-gradient(270deg, rgba(186, 42, 31, 1) 50%, rgba(246, 227, 107, 1) 50%);
+
+    /* Outlines */
+    --outline-color: #FFF19A;
+
+    /* Topbar */
+    --topbar-bg: rgba(89, 87, 0, 0.3);
+
+    /* Tipos */
+    --type-bg: rgb(230, 168, 0);
+
+    /* First-screen overlays */
+    --first-p-bg: #ffffff2a;
+    --first-h5-bg: #5957002a;
+
+    /* Second-screen div */
+    --second-div-bg: #5957002a;
+
+    /* Third-screen género */
+    --third-gender-bg: linear-gradient(90deg, rgba(186, 42, 31, 0.3) 50%, rgba(255, 241, 154, 0.3) 50%);
+
+    /* Fourth-screen texto */
+    --fourth-p-bg: #5957002a;
+}
+
 body {
-    background-color: black;
+    background-color: var(--body-bg);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
+    color: var(--body-text);
 }
 
 .main {
@@ -24,7 +66,7 @@ body {
     height: 90%;
     width: 90%;
     border-radius: 1em;
-    background-color: rgb(61, 61, 61);
+    background-color: var(--pantalla-bg);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,8 +84,8 @@ body {
     height: 100%;
     width: 100%;
     position: absolute;
-    background: #7D6000;
-    background: linear-gradient(180deg, rgba(125, 96, 0, 1) 0%, rgba(197, 135, 73, 1) 100%);
+    background: var(--bg-main-color);
+    background: var(--bg-main-gradient);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,8 +95,8 @@ body {
     height: 20%;
     position: absolute;
     top: 0;
-    background: #BA2A1F;
-    background: linear-gradient(250deg, rgba(186, 42, 31, 1) 0%, rgba(246, 227, 107, 1) 100%);
+    background: var(--topbg-color);
+    background: var(--topbg-gradient);
     border-radius: 50%;
     transform: translateY(-50%);
     border: none;
@@ -64,8 +106,8 @@ body {
     height: 40%;
     position: absolute;
     bottom: -2%;
-    background: #BA2A1F;
-    background: linear-gradient(270deg, rgba(186, 42, 31, 1) 50%, rgba(246, 227, 107, 1) 50%);
+    background: var(--topbg-color);
+    background: var(--cornerbg-gradient);
     border: none;
     -webkit-mask-image: radial-gradient(
         ellipse 100% 200% at 50% 0%,
@@ -98,7 +140,7 @@ body {
     aspect-ratio: 1;
     position: absolute;
     border-radius: 50%;
-    border: 4px solid #FFF19A;
+    border: 4px solid var(--outline-color);
     box-sizing: border-box;
 }
   
@@ -107,20 +149,19 @@ body {
     aspect-ratio: 1;
     position: absolute;
     border-radius: 50%;
-    border: 4px solid #FFF19A;
+    border: 4px solid var(--outline-color);
 }
 .centeroutline2 {
     width: 22%;
     aspect-ratio: 1;
     position: absolute;
     border-radius: 50%;
-    border: 4px solid #FFF19A;
+    border: 4px solid var(--outline-color);
 }
 .lineoutline1 {
     width: 28%;
     position: absolute;
-    border: 2px solid #FFF19A;
-    position: absolute;
+    border: 2px solid var(--outline-color);
     left: 0;
     box-sizing: content-box;
     transform: translateY(-500%);
@@ -128,8 +169,7 @@ body {
 .lineoutline2 {
     width: 28%;
     position: absolute;
-    border: 2px solid #FFF19A;
-    position: absolute;
+    border: 2px solid var(--outline-color);
     left: 0;
     box-sizing: content-box;
     transform: translateY(500%);
@@ -137,8 +177,7 @@ body {
 .lineoutline3 {
     width: 28%;
     position: absolute;
-    border: 2px solid #FFF19A;
-    position: absolute;
+    border: 2px solid var(--outline-color);
     right: 0;
     box-sizing: content-box;
     transform: translateY(-500%);
@@ -146,8 +185,7 @@ body {
 .lineoutline4 {
     width: 28%;
     position: absolute;
-    border: 2px solid #FFF19A;
-    position: absolute;
+    border: 2px solid var(--outline-color);
     right: 0;
     box-sizing: content-box;
     transform: translateY(500%);
@@ -155,20 +193,18 @@ body {
 
 
 /* elemets */
-
-
 /* topbar */
 .topbar {
     width: 80%;
     height: 13%;
     position: absolute;
     top: 3%;
-    background-color: rgba(89, 87, 0, 0.3);
+    background-color: var(--topbar-bg);
     border-radius: 1em;
     display: flex;
     padding: 2% 5%;
+    backdrop-filter: blur(3px);
 }
-
 .topbar > div:first-child {
     display: flex;
     flex-direction: column;
@@ -183,7 +219,6 @@ body {
     position: absolute;
     right: 5%;
 }
-
 .topbar h2 {
     font-size: 200%;
     font-weight: 700;
@@ -193,7 +228,6 @@ body {
     font-weight: 800;
     width: 100%;
 }
-
 .topbar p {
     font-size: 150%;
     font-weight: 700;
@@ -202,24 +236,22 @@ body {
     font-weight: 800;
     width: 100%;
 }
-
 .type1{
     width: 100%;
     height: 45%;
     position: relative;
-    background-color: rgb(230, 168, 0);
+    background-color: var(--type-bg);
     border-radius: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 800;
 }
-
 .type2{
     width: 100%;
     height: 45%;
     position: relative;
-    background-color: rgb(230, 168, 0);
+    background-color: var(--type-bg);
     border-radius: 1em;
     display: flex;
     justify-content: center;
@@ -227,3 +259,151 @@ body {
     font-weight: 800;
     margin-top: 5%;
 }
+
+.screen{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* first screen */
+
+.first-screen img {
+    height: 40%;
+    position: relative;
+}
+.first-screen p {
+    max-width: 60%;
+    text-align: center;
+    font-size: 110%;
+    background-color: var(--first-p-bg);
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-weight: 500;
+    backdrop-filter: blur(3px);
+}
+.first-screen h5 {
+    max-width: 70%;
+    text-align: center;
+    font-size: 120%;
+    background-color: var(--first-h5-bg);
+    border-radius: 0.5em;
+    padding: 0.5em 1.5em;
+    font-weight: 500;
+    margin-top: 0;
+    backdrop-filter: blur(3px);
+}
+
+
+/* second screen */
+.second-screen img {
+    height: 40%;
+    position: relative;
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+.second-screen div {
+    height: 15%;
+    width: 70%;
+    padding: 0 0.7em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--second-div-bg);
+    backdrop-filter: blur(3px);
+    border-radius: 0.5em;
+    font-size: 200%;
+    margin-bottom: 1%;
+}
+
+.second-screen div p { width: 50%; }
+.second-screen div > p:last-child { flex: right; text-align: right;}
+
+
+/* third screen */
+.third-screen img {
+    height: 40%;
+    position: relative;
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+.img-height-weight{
+    height: 40%;
+    width: 80%;
+    position: relative;
+    margin-top: -20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.img-height-weight * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-height-weight img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.img-height-weight p{
+    font-size: 170%;
+    font-weight: 700;
+    position: relative;
+}
+.img-height-weight p span{
+    position: absolute;
+    left: 0em;
+    bottom: -0.2em;
+    font-size: 700%;
+    font-weight: 100;
+}
+.third-screen .gender{
+    position: relative;
+    width: 80%;
+    height: 15%;
+    margin-top: 20%;
+    background: var(--third-gender-bg);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    font-size: 150%;
+    font-weight: 500;
+}
+.third-screen .gender p{ width: 50%;}
+.third-screen .gender > p:last-child { text-align: right; }
+
+/* fourth screen */
+.fourth-screen .evolution {
+    display: flex;
+    width: 80%;
+}
+.fourth-screen .evolution .pokemon {
+    width: 30%;
+    height: auto;
+}
+.fourth-screen p {
+    width: 80%;
+    font-size: 110%;
+    background-color: var(--fourth-p-bg);
+    backdrop-filter: blur(3px);
+    padding: 0.5em 1.5em;
+    border-radius: 1em;
+}
+
+
+
+
+.first-screen { display: none; }
+.second-screen { display: none; }
+.third-screen { display: none; }
+.fourth-screen { display: none; }
