@@ -403,7 +403,24 @@ body {
 
 
 
-.first-screen { display: none; }
-.second-screen { display: none; }
-.third-screen { display: none; }
-.fourth-screen { display: none; }
+.screen {
+    display: none;
+}
+.screen.active {
+    display: flex;
+}
+
+
+
+.pantalla * {
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.pantalla.off * {
+    opacity: 0;
+}
+
+.pantalla.off::after {
+    animation: none;
+}
