@@ -400,11 +400,9 @@ body {
     border-radius: 1em;
 }
 
-
 /* fifth screen */
-
 .fifth-screen > .habilidad:first-child {
-    margin-top: -20%;
+    margin-top: -10%;
 }
 .fifth-screen .habilidad{
     width: 73%;
@@ -413,7 +411,7 @@ body {
     background-color: var(--second-div-bg);
     backdrop-filter: blur(3px);
     border-radius: 0.5em;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
 }
 .fifth-screen h1{
     margin-top: 4%;
@@ -425,6 +423,50 @@ body {
 }
 .fifth-screen p{
     margin-top: 0;
+}
+
+/* sixth screen */
+.sixth-screen {
+    width: 80%;
+    height: 75%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sixth-screen .moves {
+    width: 100%;
+    background-color: var(--second-div-bg);
+    backdrop-filter: blur(3px);
+    border-radius: 0.5em;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    padding: 3% 5%;
+}
+.sixth-screen .general {
+    width: 65%;
+    position: relative;
+    float: left;
+    margin-top: -3%;
+}
+.sixth-screen .detalles {
+    width: 23%;
+    float: right;
+    position: relative;
+    margin-top: -3%;
+}
+.sixth-screen .moves h1 {
+    margin-bottom: 0.2em;
+    position: relative;
+    top: 0;
+    margin: 0;
+    font-size: 150%;
+}
+.sixth-screen .moves p {
+    position: relative;
+    top: 0;
+    margin: 0;
+    font-size: 100%;
 }
 
 
