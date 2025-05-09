@@ -274,15 +274,7 @@ $conn->close();
         
         <?php echo $evolution_output; ?>
         
-        <div class="example">
-            <h3>Example:</h3>
-            <div class="evolution-step">
-                <p>[step 1] Pichu (ID=172) evolves into Pikachu (ID=25) via friendship method</p>
-            </div>
-            <div class="evolution-step">
-                <p>[step 2] Pikachu (ID=25) evolves into Raichu (ID=26) using a THUNDER STONE via item method</p>
-            </div>
-        </div>
+        
     </div>
 </body>
 </html>
