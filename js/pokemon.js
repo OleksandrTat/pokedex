@@ -142,12 +142,11 @@ function updatePokemonUI(pokemon) {
 
 // Функція для оновлення блоку еволюцій
 function updateEvolutionUI(pokemon) {
-    const evolutionContainer = document.querySelector('.evolution');
-    const evolutionText = document.querySelector('.evolution-text');
+    console.log(pokemon.evolutions)
+    const evolutionContainer = document.querySelector('.fourth-screen');
     
     // Очищаємо контейнери
     evolutionContainer.innerHTML = '';
-    evolutionText.innerHTML = '';
     
     if (pokemon.evolutions && pokemon.evolutions.length > 0) {
         // Сортуємо еволюції за порядком

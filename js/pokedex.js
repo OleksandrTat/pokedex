@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPokemonId = initialPokemon.pokedex_number || 25;
 
     const elems = {
-      name:        document.getElementById('poke-name'),
-      number:      document.getElementById('poke-number'),
+      name:        document.getElementById('pokemon-name'),
+      number:      document.getElementById('pokemon-number'),
       type1:       document.getElementById('type1'),
       type2:       document.getElementById('type2'),
       img1:        document.getElementById('poke-img'),
-      img2:        document.getElementById('poke-img-2'),
-      species:     document.getElementById('poke-species'),
-      desc:        document.getElementById('poke-desc'),
+    //   img2:        document.getElementById('poke-img-2'),
+      species:     document.getElementById('species'),
+      desc:        document.getElementById('description'),
       stats: {
         hp:  document.getElementById('stat-hp'),
         at:  document.getElementById('stat-at'),
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         sdef:document.getElementById('stat-sdef'),
         sp:  document.getElementById('stat-sp'),
       },
-      height: document.getElementById('poke-height'),
-      weight: document.getElementById('poke-weight'),
+      height: document.getElementById('height'),
+      weight: document.getElementById('weight'),
     };
   
     function loadPokemon(num) {
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (pokemon.secondary_type) {
             type2Element.textContent = pokemon.secondary_type;
-            type2Element.style.display = 'inline-block';
+            type2Element.style.display = 'flex';
         } else {
             type2Element.style.display = 'none';
         }
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Функція оновлення еволюційного ланцюга
     function updateEvolutionChain(pokemon) {
-        const evoChain = pokemon.evolution_chain || [];
+        const evoChain = pokemon.evolution_chain || pokemon.evolution || [];
         
         // За замовчуванням - еволюційний ланцюг Пікачу
         let firstPokemon = { name: 'Pichu', pokedex_number: 172, image_url: 'img/pichu.png' };

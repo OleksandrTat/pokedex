@@ -5,4 +5,3 @@ VanillaTilt.init(document.querySelectorAll(".tilt-main"), {
     preserveTilt: true,
     scale: 1.05
   });
-ф
