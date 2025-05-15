@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const randomButton = document.querySelector('.buttonRandom');
     const idButton = document.querySelector('.buttonId');
     const nameButton = document.querySelector('.buttonName');
+    const exportButton = document.querySelector('.buttonExport');
     
     // Current pokemon ID from URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -16,12 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listeners for navigation buttons
     upButton.addEventListener('click', function() {
         // Navigate to previous Pokemon
-        fetchPokemon('prev', currentId);
+        fetchPokemon('next', currentId);
     });
     
     downButton.addEventListener('click', function() {
         // Navigate to next Pokemon
-        fetchPokemon('next', currentId);
+        fetchPokemon('prev', currentId);
     });
     
     // Random button
@@ -37,6 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Name search button
     nameButton.addEventListener('click', function() {
         searchPokemon('name');
+    });
+    
+    // Export button
+    exportButton.addEventListener('click', function() {
+        exportPokemon(currentId);
     });
     
     /**
@@ -113,4 +119,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    /**
+     * Export Pokemon data as JSON
+     */
+    function exportPokemon(id) {
+        window.location.href = `export.php?id=${id}`;
+    }
+
 });

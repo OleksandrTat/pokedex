@@ -1,6 +1,6 @@
 <?php
-require_once 'config.php';
-require_once 'pokemon_functions.php';
+require_once 'php/config.php';
+require_once 'php/pokemon_functions.php';
 
 // Default pokemon id (Pikachu - #25)
 $pokemonId = isset($_GET['id']) ? (int)$_GET['id'] : 25;

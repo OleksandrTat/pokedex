@@ -1,23 +1,23 @@
--- Tabla de Pokémon
+CREATE DATABASE IF NOT EXISTS pokemon;
+USE pokemon;
+
 CREATE TABLE pokemon (
     id INT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     species VARCHAR(100) NOT NULL,
     description TEXT,
-    height DECIMAL(5,2),  -- en metros
-    weight DECIMAL(5,2),  -- en kilogramos
+    height DECIMAL(5,2),
+    weight DECIMAL(5,2),
     gender_rate INT,      -- -1: sin género, 0: sólo macho, 8: sólo hembra, 1-7: probabilidad de ser hembra
     image_url VARCHAR(255)
 );
 
--- Tabla de Tipos de Pokémon
 CREATE TABLE types (
     id INT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    color VARCHAR(20) NOT NULL  -- Para el color de fondo en la interfaz
+    color VARCHAR(20) NOT NULL
 );
 
--- Tabla de relación entre Pokémon y sus tipos (puede tener hasta 2 tipos)
 CREATE TABLE pokemon_types (
     pokemon_id INT,
     type_id INT,
@@ -26,7 +26,6 @@ CREATE TABLE pokemon_types (
     FOREIGN KEY (type_id) REFERENCES types(id)
 );
 
--- Tabla de Estadísticas de Pokémon
 CREATE TABLE stats (
     pokemon_id INT PRIMARY KEY,
     hp INT NOT NULL,
@@ -38,14 +37,12 @@ CREATE TABLE stats (
     FOREIGN KEY (pokemon_id) REFERENCES pokemon(id)
 );
 
--- Tabla de Métodos de Evolución
 CREATE TABLE evolution_methods (
     id INT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description TEXT
 );
 
--- Tabla de Evoluciones
 CREATE TABLE evolutions (
     id INT PRIMARY KEY,
     from_pokemon_id INT,
@@ -59,16 +56,14 @@ CREATE TABLE evolutions (
     FOREIGN KEY (evolution_method_id) REFERENCES evolution_methods(id)
 );
 
--- Tabla de Favoritos (para la funcionalidad de "Like")
 CREATE TABLE favorites (
     id INT PRIMARY KEY AUTO_INCREMENT,
     pokemon_id INT,
-    user_id INT,  -- Si implementas un sistema de usuarios
+    user_id INT,
     date_added DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (pokemon_id) REFERENCES pokemon(id)
 );
 
--- Tabla de Comparaciones (para la funcionalidad de "Compare")
 CREATE TABLE comparisons (
     id INT PRIMARY KEY AUTO_INCREMENT,
     pokemon1_id INT,
