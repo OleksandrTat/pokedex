@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const idButton = document.querySelector('.buttonId');
     const nameButton = document.querySelector('.buttonName');
     const exportButton = document.querySelector('.buttonExport');
+    const principalTopButton = document.querySelector('.boton_principal_top');
+    const principalBottomButton = document.querySelector('.boton_principal_bottom');
     
     // Current pokemon ID from URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -23,6 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
     downButton.addEventListener('click', function() {
         // Navigate to next Pokemon
         fetchPokemon('prev', currentId);
+    });
+    principalTopButton.addEventListener('click', function() {
+        // Navigate to previous Pokemon 
+        fetchPokemon('next', parseInt(currentId) + 9);
+    });
+    
+    principalBottomButton.addEventListener('click', function() {
+        // Navigate to next Pokemon
+        fetchPokemon('prev', parseInt(currentId) - 9);
     });
     
     // Random button
